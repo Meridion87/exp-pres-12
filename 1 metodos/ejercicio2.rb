@@ -6,9 +6,11 @@ def random
   result
 end
 
-if random == true
+aux = random
+
+if aux == true
   puts 'sí'
-elsif random == false
+elsif aux == false
   puts 'no'
 else
   puts 'error'

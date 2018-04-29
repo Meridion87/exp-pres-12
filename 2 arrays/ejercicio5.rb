@@ -9,14 +9,9 @@ prices = %w[1000 2000 1500 950]
 
 html = ''
 
-for i in 0..length-1
-  
-end
-
-
-products.each do |i|
+for i in 0..(products.length-1)
   html += "<div class='product'>"
-  html += "<p> #{i} </p>"
+  html += "<p> #{products[i]} </p><p> #{prices[i]} </p>"
   html += "</div>\n"
 end
 

@@ -7,12 +7,13 @@
 a = [1,2,3,9,1,4,5,2,3,6,6]
 
 def elimina_pares (a)
-  pos_par = []
-  for i in 0..(a.length-1)
-    pos_par.push(i) if a[i].to_i.even?
-  end
-  pos_par.each do |j|
-    a.delete_at(j)
+  i = 0
+  while i < (a.length)
+    if a[i].to_i.even?
+      a.delete_at(i)
+      next
+    end
+    i += 1
   end
   puts a
 end
@@ -41,7 +42,7 @@ def incrementa (a)
   puts a
 end
 
-#elimina_pares(a)
+elimina_pares(a)
 #suma_elementos(a)
 #promedio_elementos(a)
 #incrementa(a)

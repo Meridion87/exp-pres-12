@@ -5,3 +5,13 @@
 
 cadena = 'Hola Mundo!'
 caracter = 'o'
+
+def encuentra (cadena, caracter)
+  if cadena.include?(caracter)
+    puts "El caracter está contenido en el string"
+  else
+    puts "El caracter no está contenido en el string"
+  end
+end
+
+encuentra(cadena, caracter)

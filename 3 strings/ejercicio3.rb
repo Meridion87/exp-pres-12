@@ -6,3 +6,63 @@
 
 a = [1, 2, 3, 9, 12, 31, 'domingo']
 b = %w[lunes martes miércoles jueves viernes sábado domingo]
+
+def concatenacion (aaa, bbb)
+  puts aaa + bbb
+end
+
+def union (aaa, bbb)
+  bbb.each do |elemento|
+    i = 0
+    encontrado = 0
+    while i < aaa.length
+      if elemento == aaa[i]
+        encontrado = 1
+        i = aaa.length
+      end
+      i+=1
+    end
+    if encontrado == 1
+      next
+    else
+      aaa.push(elemento)
+    end
+  end
+  puts aaa
+end
+
+def interseccion (aaa, bbb)
+  ccc = []
+  bbb.each do |elemento|
+    i = 0
+    encontrado = 0
+    while i < aaa.length
+      if elemento == aaa[i]
+        encontrado = 1
+        i = aaa.length
+      end
+      i+=1
+    end
+    if encontrado == 1
+      ccc.push(elemento)
+    else
+      next
+    end
+  end
+  puts ccc
+end
+
+def intercalar(aaa, bbb)
+  ccc = []
+  for i in 0..(aaa.length-1)
+    ccc.push(aaa[i])
+    ccc.push(bbb[i])
+  end
+  puts ccc
+end
+
+
+#concatenacion(a, b)
+#union(a, b)
+#interseccion(a, b)
+intercalar(a, b)
